@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html th:fragment="layout (title, links, content)" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{template/layoutExtend/layoutExtendHader :: common_header(${title}, ${links})}">
+  <title th:replace="${title}">레이아웃 타이틀</title>
+</head>
+<body>
+<h1>레이아웃 H1</h1>
+<div th:replace="${content}">
+  <p>레이아웃 컨텐츠</p>
+</div>
+<div th:replace="~{template/layoutExtend/layoutExtendFooter :: copyParam('데이터1', '데이터2')}"></div>
+</body>
+</html>
